@@ -53,7 +53,7 @@ public class Superheroes {
 
     @Override
     public String toString() {
-        return "Superheroes{" + "nombre=" + nombre + ", descripcion=" + descripcion + ", capa=" + capa + '}';
+        return "Superheroes{" + "Nombre=" + nombre + ", Descripcion=" + descripcion + ", Capa=" + capa + '}';
     }
     
     
