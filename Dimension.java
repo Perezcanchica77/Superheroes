@@ -9,46 +9,46 @@ package com.mycompany.superheroes;
  * @author perez
  */
 public class Dimension {
-    private Double alto;
-    private Double ancho;
-    private Double profundidad;
+    private double alto;
+    private double ancho;
+    private double profundidad;
 
     public Dimension(){
         this.alto = 0.0; //cadena vacia
         this.ancho = 0.0;
         this.profundidad = 0.0;
     }     
-    public Dimension(Double alto, Double ancho, Double profundidad) {
+    public Dimension(double alto, double ancho, double profundidad) {
         this.alto = alto;
         this.ancho = ancho;
         this.profundidad = profundidad;  
     }
-    public Double getAlto() {
+    public double getAlto() {
         return alto;
     }
-    public Double getAncho() {
+    public double getAncho() {
         return ancho;
     }
-    public Double getProfundidad() {
+    public double getProfundidad() {
         return profundidad;
     }
-    public void setAlto(Double alto) {
+    public void setAlto(double alto) {
         this.alto = alto;
     }
-    public void setAncho(Double ancho) {
+    public void setAncho(double ancho) {
         this.ancho = ancho;
     }
-    public void setProfundidad(Double profundidad) {
+    public void setProfundidad(double profundidad) {
         this.profundidad = profundidad;
     }
     public double getVolumen() {
-        double volumen = alto * ancho * profundidad;
-        return volumen;
+        return Math.round((alto * ancho * profundidad) * 100.0) / 100.0;
     }
 
     @Override
     public String toString() {
-        return "Dimension{" + "El alto es=" + alto + ", el ancho es=" + ancho + ", la profundidad es=" + profundidad + "y el volumen maximo es=" +getVolumen()+ '}';
+        return "Dimension{" + "El alto es=" + alto + ", el ancho es=" + ancho + ", la profundidad es=" + profundidad +
+                "y el volumen es=" +getVolumen()+ '}';
     }
        
 }

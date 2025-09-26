@@ -12,7 +12,7 @@ public class Superheroes {
 // Atributos
     private String nombre;
     private String descripcion;
-    private Boolean capa;
+    private boolean capa;
     
 //Constructores
     public Superheroes(){
@@ -47,13 +47,13 @@ public class Superheroes {
         this.descripcion = descripcion;
     }
 
-    public void setCapa(Boolean capa) {
+    public void setCapa(boolean capa) {
         this.capa = capa;
     }
 
     @Override
     public String toString() {
-        return "Superheroes{" + "Nombre=" + nombre + ", Descripcion=" + descripcion + ", Capa=" + capa + '}';
+        return "Superheroe{" + "Nombre=" + nombre + ", Descripcion=" + descripcion + ", Capa=" + capa + '}';
     }
     
     

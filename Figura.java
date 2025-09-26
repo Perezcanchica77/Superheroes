@@ -14,19 +14,23 @@ public class Figura {
     private double precio;
     private Dimension dimensiones;
     private Superheroes superheroe;
+    
 
-    public Figura(String codigo, double precio, Superheroes superheroe, Dimension dimensiones) {
-        this.codigo = codigo;
+    public Figura(double precio, Superheroes superheroe, Dimension dimensiones) {
+        this.codigo = generarCodigo();
         this.precio = precio;
         this.dimensiones = dimensiones;
-        this.superheroe = superheroe;
-        
-        cont++;//nose donde meter este contador es huerfano busca familia que le cuide
+        this.superheroe = superheroe;  
     }
+    
+     private String generarCodigo() {
+        return "FIG" + cont++;
+    }
+
     public String getCodigo() {
         return codigo;
     }
-    public Double getPrecio() {
+    public double getPrecio() {
         return precio;
     }
     public Dimension getDimensiones() {
@@ -35,16 +39,18 @@ public class Figura {
     public Superheroes getSuperheroe() {
         return superheroe;
     }
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-    public void setPrecio(Double precio) {
+    
+    
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
-    @Override
-    public String toString() {
-        return "La Figura{" + "tiene el codigo=" + codigo + ", su precio es=" + precio +
-                ", su dimension es=" + dimensiones + " y el superheroe es=" + superheroe + '}';
-    }   
     
+   @Override
+public String toString() {
+    return "Figura [codigo=" + codigo +
+           ", precio=" + precio +
+           ", superheroe=" + superheroe.getNombre() +
+           ", dimensiones=" + dimensiones.toString() + "]";
+}
+
 }
